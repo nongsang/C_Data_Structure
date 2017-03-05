@@ -11,12 +11,12 @@ int main(void)
 	double duration;
 	int i, n = 0;
 	start = clock();
-	
-	for(i = 0; i< 1000000; ++i)
+
+	for (i = 0; i< 1000000; ++i)
 		power(2, 500);			// 재귀를 이용한 거듭제곱 알고리즘
 
-	//for (i = 0; i< 1000000; ++i)
-	//	slow_power(2, 500);		// 일반적인 수준의 거듭제곱 알고리즘
+								//for (i = 0; i< 1000000; ++i)
+								//	slow_power(2, 500);		// 일반적인 수준의 거듭제곱 알고리즘
 
 	finish = clock();
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
@@ -77,3 +77,9 @@ double slow_power(double dParam, int nParam)
 // 하지만 일반적으로 생각할 수 있는 함수는 처음부터 차례대로 100만번 곱하기만 하는 방식이다.
 // 거듭제곱할 횟수만큼 for문을 수행하고 100만번을 또 수행한다.
 // 매우 비효율적이다. 1/2 혹은 1/3으로 나눠서 수행할 수 있으면 나눠서 하자.
+
+// 재귀함수의 장점
+// 매우 간단하고 보기 쉽게 알고리즘을 구현할 수 있다.
+
+// 재귀함수의 단점
+// 함수 호출을 매우 많이 한다.
