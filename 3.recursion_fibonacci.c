@@ -12,7 +12,7 @@ int main(void)
 	start = clock();
 
 	//printf("%d\n", fibonacci(40));						// 재귀를 이용한 피보나치 수열
-	printf("%d\n", fibonacci_iter(100000000));		// 반복을 이용한 피보나치 수열
+	printf("%d\n", fibonacci_iter(100000000));				// 반복을 이용한 피보나치 수열
 
 	finish = clock();
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
