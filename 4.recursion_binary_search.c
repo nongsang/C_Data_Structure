@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int RecursionBinarySearch(int arr[], int nfirst, int nlast, int ntarget);
+int RecursionBinarySearch(int arr[], int first, int last, int target);
 
 int main(void)
 {
@@ -29,20 +29,20 @@ int main(void)
 	printf("%f 초 입니다.\n", duration);
 }
 
-int RecursionBinarySearch(int arr[], int nfirst, int nlast, int ntarget)	// 재귀함수를 이용한 이진 탐색 알고리즘 함수이다.
+int RecursionBinarySearch(int arr[], int first, int last, int target)	// 재귀함수를 이용한 이진 탐색 알고리즘 함수이다.
 {
-	int n_mid;
+	int mid;
 
-	if (nfirst > nlast)			// 범위를 잘 정하게끔
+	if (first > last)			// 범위를 잘 정하게끔
 		return -1;
-	n_mid = (nfirst + nlast) / 2;
+	mid = (first + last) / 2;
 
-	if (ntarget == arr[n_mid])
-		return n_mid;
-	else if (ntarget < arr[n_mid])
-		return RecursionBinarySearch(arr, nfirst, n_mid - 1, ntarget);		// 재귀함수 사용
+	if (target == arr[mid])
+		return mid;
+	else if (target < arr[mid])
+		return RecursionBinarySearch(arr, first, mid - 1, target);		// 재귀함수 사용
 	else
-		return RecursionBinarySearch(arr, n_mid + 1, nlast, ntarget);		// 재귀함수 사용
+		return RecursionBinarySearch(arr, mid + 1, last, target);		// 재귀함수 사용
 }
 
 // 재귀함수를 이용한 이진 탐색 알고리즘 함수를 구현한다.
@@ -60,7 +60,7 @@ int RecursionBinarySearch(int arr[], int nfirst, int nlast, int ntarget)	// 재�
 // 찾고자하는 값이 중간보다 뒤에 있다면 first를 중간값으로 바꿔서 다시 함수를 부른다.
 
 // 일반 이진 탐색 알고리즘과의 비교
-// 나중에 이진 탐색 트리를 사용할테니 보면서 비교해보도록
+// 나중에 일반 이진탐색 알고리즘과 보면서 비교하도록
 // 일반 이진 탐색 알고리즘은 while문을 사용한다.
 // 함수 내에서 조건을 만족할 때 까지 반복하는 구조이다.
 // 재귀 이진 탐색 알고리즘은 조건에 맞지 않다면 범위를 좁혀서 알고리즘을 다시 호출한다.
