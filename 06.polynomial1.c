@@ -48,12 +48,14 @@ int main()
 	polynomial a = { 5,{ 3, 6, 0, 0, 0, 10 } };
 	polynomial b = { 4,{ 7, 0, 5, 0, 1 } };
 	polynomial c;
+	
 	start = clock();
 
 	c = poly_add1(a, b);
 	printf("%d차항 %d, %d, %d, %d, %d, %d\n", c.degree, c.coef[0], c.coef[1], c.coef[2], c.coef[3], c.coef[4], c.coef[5]);
 
 	finish = clock();
+	
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
 	printf("%f 초 입니다.\n", duration);
 }
