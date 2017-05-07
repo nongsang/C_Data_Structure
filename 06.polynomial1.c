@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #define MAX(a,b) ( a > b ? a : b )
@@ -6,7 +6,7 @@
 
 typedef struct 			// 다항식 구조체 타입 선언
 {
-	int degree;				// 다항식의 차수
+	int degree;		// 다항식의 차수
 	int coef[MAX_DEGREE];	// 다항식의 계수
 } polynomial;
 
