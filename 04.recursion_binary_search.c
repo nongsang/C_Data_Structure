@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -10,6 +10,7 @@ int main(void)
 	double duration;
 	int arr[] = { 1, 3, 5, 7, 9 };
 	int idx;
+	
 	start = clock();
 
 	idx = RecursionBinarySearch(arr, 0, sizeof(arr) / sizeof(int) - 1, 5);
@@ -25,6 +26,7 @@ int main(void)
 		printf("타겟 저장 인덱스 : %d\n", idx);
 
 	finish = clock();
+	
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
 	printf("%f 초 입니다.\n", duration);
 }

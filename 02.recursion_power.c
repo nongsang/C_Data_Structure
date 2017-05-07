@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -10,15 +10,17 @@ int main(void)
 	clock_t start, finish;
 	double duration;
 	int i, n = 0;
+	
 	start = clock();
 
 	for (i = 0; i< 1000000; ++i)
 		power(2, 500);			// 재귀를 이용한 거듭제곱 알고리즘
 
-								//for (i = 0; i< 1000000; ++i)
-								//	slow_power(2, 500);		// 일반적인 수준의 거듭제곱 알고리즘
+	//for (i = 0; i< 1000000; ++i)
+	//	slow_power(2, 500);		// 일반적인 수준의 거듭제곱 알고리즘
 
 	finish = clock();
+	
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
 	printf("%f 초 입니다.\n", duration);
 }
